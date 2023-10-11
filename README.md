@@ -25,7 +25,7 @@ To run this project, you will need the following tools:
 1. Clone the project repository:
 
     ```shell
-    git clone https://github.com/yourusername/your-gatling-project.git
+    git clone https://github.com/marvelfrozen/gatling-kotlin.git
     ```
 
 2. Open the project in IntelliJ IDEA.
