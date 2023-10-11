@@ -9,7 +9,10 @@ This project serves as a tutorial for those looking to start learning about Gatl
 1. [Getting Started](#getting-started)
     - [Installation](#installation)
     - [Quick Start](#quick-start)
-2. [Contact](#contact)
+2. [Example Simulation Flows](#example-simulation-flows)
+3. [Acknowledgement](#acknowledgment)
+4. [Note on Usage](#note-on-usage)
+5. [Contact](#contact)
 
 ## Getting Started
 
@@ -30,13 +33,55 @@ To run this project, you will need the following tools:
 
 2. Open the project in IntelliJ IDEA.
 
-3. Use the following command to run a Gatling simulation:
+3. Wait for IntelliJ IDEA to resolve and download all Gradle dependencies. This process might take a few moments.
+
+4. Use the following command to run a Gatling simulation:
 
     ```shell
     gradle gatlingRun-simulation.ReqResSimulation
     ```
 
-4. The test results will be generated in the `build/reports/gatling` folder.
+5. The test results will be generated in the `build/reports/gatling` folder.
+   ![Example Report](example_report.png)
+
+## Example Simulation Flows
+
+This section describes the ReqResSimulation flows included in this project. The simulation consists of several Gatling scenarios that cover different API interactions.
+
+### Flow 1: List of Users and User Detail
+
+This flow simulates querying a list of users and retrieving user details using the IDs obtained from the previous call to the list of users. The two calls are grouped together to represent this common use case.
+
+- **Scenario:** GetUserScenario
+- **Steps:**
+   1. Execute a request to retrieve a list of users.
+   2. Extract the first user ID from the response.
+   3. Send a request to retrieve user detail.
+
+### Flow 2: Create User
+
+This flow demonstrates creating a new user using a POST request.
+
+- **Scenario:** CreateUserScenario
+- **Steps:**
+   1. Execute a request to create a new user.
+
+### Flow 3: Update User
+
+In this flow, the project includes a separate simulation for updating an existing user's information using a PUT request.
+
+- **Scenario:** EditUserScenario
+- **Steps:**
+   1. Execute a request to update the user's information.
+
+
+## Acknowledgment
+
+This project uses the ReqRes.in service for the example simulation. We appreciate their contribution to the developer community.
+
+## Note on Usage
+
+While using this project for load testing and performance testing, please ensure responsible usage. Do not attempt to overwhelm or perform Distributed Denial of Service (DDoS) attacks on external services, including ReqRes.in. Always respect the terms of use and usage policies of any third-party services you interact with.
 
 ## Contact
 
