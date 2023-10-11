@@ -9,6 +9,7 @@ This project serves as a tutorial for those looking to start learning about Gatl
 1. [Getting Started](#getting-started)
     - [Installation](#installation)
     - [Quick Start](#quick-start)
+2. [Contact](#contact)
 
 ## Getting Started
 
@@ -36,3 +37,11 @@ To run this project, you will need the following tools:
     ```
 
 4. The test results will be generated in the `build/reports/gatling` folder.
+
+## Contact
+
+For any questions or assistance related to this project, feel free to reach out to me:
+
+- **Name:** Gavril
+- **Email:** [marvelfrozen@gmail.com](mailto:marvelfrozen@gmail.com)
+- **LinkedIn:** [linkedin.com/in/gavrilafb](https://www.linkedin.com/in/gavrilafb)
