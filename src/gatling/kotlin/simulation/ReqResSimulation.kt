@@ -31,13 +31,15 @@ class ReqResSimulation : Simulation() {
                               status().`is`(200),
                               // use jmespath to get the response body
                               jmesPath("data[0].id")
-                                  // and then save it to a variable
+                                  // and then save it to a session's attribute
                                   .saveAs("userId")
                                   // this is the error message if there's no user found
                                   .name("no user found")))
+                  // read more about session
+                  // https://gatling.io/docs/gatling/reference/current/core/session/session_api/#session
                   .exec(
                       http("get user detail")
-                          // use the saved variable from previous api call here using gatling's
+                          // use the saved attribute from previous api call here using gatling's
                           // expression laguage
                           .get("/api/users/#{userId}")
                           .check(status().`is`(200))))
